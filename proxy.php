@@ -20,11 +20,11 @@ $forceCORS = false;
 //Setting to false may improve compatibility with some sites, but also exposes more information about end users to proxied sites.
 $anonymize = true;
 
-//Start/default URL that that will be proxied when miniProxy is first loaded in a browser/accessed directly with no URL to proxy.
+//Start/default URL that that will be proxied when first loaded in a browser/accessed directly with no URL to proxy.
 //If empty, miniProxy will show its own landing page.
 $startURL = "";
 
-//When no $startURL is configured above, miniProxy will show its own landing page with a URL form field
+//When no $startURL is configured above, will show its own landing page with a URL form field
 //and the configured example URL. The example URL appears in the instructional text on the miniProxy landing page,
 //and is proxied when pressing the 'Proxy It!' button on the landing page if its URL form is left blank.
 $landingExampleURL = "https://example.net";
@@ -34,7 +34,7 @@ $landingExampleURL = "https://example.net";
 ob_start("ob_gzhandler");
 
 if (version_compare(PHP_VERSION, "5.4.7", "<")) {
-  die("miniProxy requires PHP version 5.4.7 or later.");
+  die("Requires PHP version 5.4.7 or later.");
 }
 
 $requiredExtensions = ["curl", "mbstring", "xml"];
